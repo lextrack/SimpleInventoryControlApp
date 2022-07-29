@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
 
         <VerticalStackLayout Padding="1" Grid.Row="0" Margin="2">
-            <Entry x:Name="Item" Placeholder="Enter product" Text="{Binding Item}" />
+            <Entry x:Name="Item" Placeholder="Enter product" Text="{Binding Item}"/>
             <Entry x:Name="Qty" Placeholder="Enter quantity" Text="{Binding Qty}"/>
             <Entry x:Name="Price" Placeholder="Enter price" Text="{Binding Price}"/>
             <Entry x:Name="Location" Placeholder="Enter product's location" Text="{Binding Location}"/>
@@ -42,12 +42,12 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Inventory">
                         <Grid Padding="10" ColumnDefinitions="*, auto">
-                            <Frame HeightRequest="70" Grid.Column="0">
+                            <Frame HeightRequest="70" Grid.Column="0" Background="IndianRed">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=GetInventoryDetailsCommand }" 
                                                           CommandParameter="{Binding Id}" />
                                 </Frame.GestureRecognizers>
-                                <HorizontalStackLayout Padding="5" Spacing="10">
+                                <HorizontalStackLayout Padding="5" Spacing="10" Background="IndianRed">
                                     <Label Text="{Binding Item}"></Label>
                                     <Label>|</Label>
                                     <Label Text="{Binding Qty}"></Label>

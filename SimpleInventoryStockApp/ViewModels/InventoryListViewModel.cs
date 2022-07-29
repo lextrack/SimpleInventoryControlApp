@@ -21,7 +21,7 @@ namespace SimpleInventoryStockApp.ViewModels
 
         public InventoryListViewModel()
         {
-            Title = "Inventory Stock";
+            Title = "Inventory";
             AddEditButtonText = createButtonText;
             GetInventoryList().Wait();
         }
@@ -72,7 +72,7 @@ namespace SimpleInventoryStockApp.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine($"Unable to get the inventory: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to retrive inventory stock.", "Ok");
+                await Shell.Current.DisplayAlert("Error", "Failed to retrive the inventory.", "Ok");
             }
             finally
             {
