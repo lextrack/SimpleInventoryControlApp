@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleInventoryStockApp.Views.InventoryDetailsPage"
+             xmlns:vm="clr-namespace:SimpleInventoryStockApp.ViewModels"
+             Title="{Binding Inventory.Item}"
+             x:DataType="vm:InventoryDetailsViewModel">
+    <StackLayout>
+        <Label Text="Date"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="35"/>
+        <Label Text="{Binding Inventory.Date}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="20"/>
+        <Label></Label>
+        <Label Text="Price $"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="35"/>
+        <Label Text="{Binding Inventory.Price}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="20"/>
+        <Label></Label>
+        <Label Text="Units"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="35"/>
+        <Label Text="{Binding Inventory.Qty}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="20"/>
+        <Label></Label>
+        <Label Text="Supplier"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="35"/>
+        <Label Text="{Binding Inventory.Supplier}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="20"/>
+        <Label></Label>
+        <Label Text="Observations"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="35"/>
+        <Label Text="{Binding Inventory.Observations}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="20"/>
+        <Label></Label>
+        <Label Text="Location"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="35"/>
+        <Label Text="{Binding Inventory.Location}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="20"/>
+
+    </StackLayout>
+</ContentPage>

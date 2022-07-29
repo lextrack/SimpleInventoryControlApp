@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleInventoryStockApp.MainPage"
+             xmlns:model ="clr-namespace:SimpleInventoryStockApp.Models"
+             xmlns:viewmodel ="clr-namespace:SimpleInventoryStockApp.ViewModels"
+             x:DataType ="viewmodel:InventoryListViewModel"
+             Title="{Binding Title}">
+    <Grid ColumnSpacing="1" RowSpacing="1" Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout Padding="1" Grid.Row="0" Margin="2">
+            <Entry x:Name="Item" Placeholder="Enter product" Text="{Binding Item}" />
+            <Entry x:Name="Qty" Placeholder="Enter quantity" Text="{Binding Qty}"/>
+            <Entry x:Name="Price" Placeholder="Enter price" Text="{Binding Price}"/>
+            <Entry x:Name="Location" Placeholder="Enter product's location" Text="{Binding Location}"/>
+            <Entry x:Name="Supplier" Placeholder="Enter supplier" Text="{Binding Supplier}"/>
+            <Entry x:Name="Observations" Placeholder="Enter observations" Text="{Binding Observations}"/>
+            <Entry x:Name="Date" Placeholder="Enter date" Text="{Binding Date}"/>
+        </VerticalStackLayout>
+
+
+        <Button Text="{Binding AddEditButtonText}" Grid.Row="1" IsEnabled="{Binding IsNotLoading}"
+                Command="{Binding SaveInventoryCommand}" Margin="5,3,0,0" />
+
+        <Button Text="Clear all" Command="{Binding ClearFormCommand}" IsEnabled="{Binding IsNotLoading}" 
+                Grid.Row="2" Margin="5,2,0,0"/>
+
+        <RefreshView Grid.Row="4"
+                     Command="{Binding GetInventoryListCommand}" 
+                     IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding Inventories}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Inventory">
+                        <Grid Padding="10" ColumnDefinitions="*, auto">
+                            <Frame HeightRequest="70" Grid.Column="0">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=GetInventoryDetailsCommand }" 
+                                                          CommandParameter="{Binding Id}" />
+                                </Frame.GestureRecognizers>
+                                <HorizontalStackLayout Padding="5" Spacing="10">
+                                    <Label Text="{Binding Item}"></Label>
+                                    <Label>|</Label>
+                                    <Label Text="{Binding Qty}"></Label>
+                                    <Label>Units</Label>
+                                </HorizontalStackLayout>
+                            </Frame>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Button Text="Update" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=SetEditModeCommand}" 
+                                                          CommandParameter="{Binding Id}" Margin="9"/>
+                                <Button Text="Delete" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=DeleteInventoryCommand }" 
+                                                          CommandParameter="{Binding Id}" Margin="9"/>
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>
