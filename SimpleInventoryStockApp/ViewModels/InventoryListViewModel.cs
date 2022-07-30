@@ -16,7 +16,7 @@ namespace SimpleInventoryStockApp.ViewModels
     public partial class InventoryListViewModel : BaseViewModel
     {
         const string editButtonText = "Update";
-        const string createButtonText = "Add a new register";
+        const string createButtonText = "Add item";
         public ObservableCollection<Inventory> Inventories { get; private set; } = new ();
 
         public InventoryListViewModel()
