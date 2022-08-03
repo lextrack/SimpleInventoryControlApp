@@ -6,7 +6,7 @@ I've used <a href="https://dotnet.microsoft.com/en-us/apps/maui">.NET MAUI </a> 
 ## Minimum Requirements
 
 - Android 6.0<br>
-- Windows 10<br>
+- Windows 10 64 bits<br>
 - iOS 14.2<br>
 
 
