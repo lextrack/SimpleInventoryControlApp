@@ -1,5 +1,7 @@
 # Simple Inventory Control App
-A simple app to register your inventory for Windows, Android and iOS. I use <a href="https://dotnet.microsoft.com/en-us/apps/maui">.NET MAUI </a>
+A simple app to register your inventory for Windows, Android and iOS. 
+<br>
+I've used <a href="https://dotnet.microsoft.com/en-us/apps/maui">.NET MAUI </a> to make this app.
 
 ## Minimum Requirements
 
