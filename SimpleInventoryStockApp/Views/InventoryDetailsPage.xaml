@@ -4,7 +4,8 @@
              x:Class="SimpleInventoryStockApp.Views.InventoryDetailsPage"
              xmlns:vm="clr-namespace:SimpleInventoryStockApp.ViewModels"
              Title="{Binding Inventory.Item}"
-             x:DataType="vm:InventoryDetailsViewModel">
+             x:DataType="vm:InventoryDetailsViewModel"
+             BackgroundColor="IndianRed">
     <StackLayout>
         <Label Text="Date"
                 VerticalOptions="Center" 

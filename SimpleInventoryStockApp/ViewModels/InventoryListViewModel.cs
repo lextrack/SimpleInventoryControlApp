@@ -56,7 +56,7 @@ namespace SimpleInventoryStockApp.ViewModels
         [ObservableProperty]
         int inventoryId;
 
-        [ICommand]
+        [RelayCommand]
         public async Task GetInventoryList()
         {
             if (IsLoading) return;
@@ -81,7 +81,7 @@ namespace SimpleInventoryStockApp.ViewModels
             }
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task GetInventoryDetails(int id)
         {
             if (id == 0) return;
@@ -89,7 +89,7 @@ namespace SimpleInventoryStockApp.ViewModels
             await Shell.Current.GoToAsync($"{nameof(InventoryDetailsPage)}?Id={id}", true);
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task SaveInventory()
         {
             if (string.IsNullOrEmpty(Item) || string.IsNullOrEmpty(Qty) || string.IsNullOrEmpty(Price))
@@ -125,7 +125,7 @@ namespace SimpleInventoryStockApp.ViewModels
             await ClearForm();
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task DeleteInventory(int id)
         {
             if (id == 0)
@@ -142,14 +142,14 @@ namespace SimpleInventoryStockApp.ViewModels
             }
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task UpdateInventory(int id)
         {
             AddEditButtonText = editButtonText;
             return;
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task SetEditMode(int id)
         {
             AddEditButtonText = editButtonText;
@@ -164,7 +164,7 @@ namespace SimpleInventoryStockApp.ViewModels
             Date = inventory.Date;
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task ClearForm()
         {
             AddEditButtonText = createButtonText;

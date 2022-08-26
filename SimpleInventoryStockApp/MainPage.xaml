@@ -30,10 +30,10 @@
 
 
         <Button Text="{Binding AddEditButtonText}" Grid.Row="1" IsEnabled="{Binding IsNotLoading}"
-                Command="{Binding SaveInventoryCommand}" Margin="5,3,0,0" />
+                Command="{Binding SaveInventoryCommand}" Margin="5,0,4,0" />
 
         <Button Text="Clear all" Command="{Binding ClearFormCommand}" IsEnabled="{Binding IsNotLoading}" 
-                Grid.Row="2" Margin="5,2,0,0"/>
+                Grid.Row="2" Margin="5,2,4,0"/>
 
         <RefreshView Grid.Row="4"
                      Command="{Binding GetInventoryListCommand}" 
@@ -41,13 +41,13 @@
             <CollectionView ItemsSource="{Binding Inventories}" SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Inventory">
-                        <Grid Padding="10" ColumnDefinitions="*, auto">
-                            <Frame HeightRequest="70" Grid.Column="0" Background="IndianRed">
+                        <Grid Padding="5" ColumnDefinitions="*, auto">
+                            <Frame HeightRequest="70" Grid.Column="0" Background="Indianred">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=GetInventoryDetailsCommand }" 
                                                           CommandParameter="{Binding Id}" />
                                 </Frame.GestureRecognizers>
-                                <HorizontalStackLayout Padding="5" Spacing="10" Background="IndianRed">
+                                <HorizontalStackLayout Padding="1" Spacing="5" Background="Indianred">
                                     <Label Text="{Binding Item}"></Label>
                                     <Label>|</Label>
                                     <Label Text="{Binding Qty}"></Label>
@@ -56,9 +56,9 @@
                             </Frame>
                             <HorizontalStackLayout Grid.Column="1">
                                 <Button Text="Update" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=SetEditModeCommand}" 
-                                                          CommandParameter="{Binding Id}" Margin="9"/>
+                                                          CommandParameter="{Binding Id}" Margin="6"/>
                                 <Button Text="Delete" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=DeleteInventoryCommand }" 
-                                                          CommandParameter="{Binding Id}" Margin="9"/>
+                                                          CommandParameter="{Binding Id}" Margin="6"/>
                             </HorizontalStackLayout>
                         </Grid>
                     </DataTemplate>

@@ -25,7 +25,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Simple Inventory"
+        DisplayName="Simple Inventory Control App"
         Description="A simple inventory register"
         Square150x150Logo="$placeholder$.png"
         Square44x44Logo="$placeholder$.png"
