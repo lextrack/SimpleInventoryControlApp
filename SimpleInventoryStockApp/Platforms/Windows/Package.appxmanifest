@@ -5,7 +5,7 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-SimpleInventoryStockApp" Publisher="CN=ariel" Version="1.0.0.0" />
+  <Identity Name="maui-package-SimpleInventoryStockApp" Publisher="CN=ariel" Version="1.0.2.0" />
 
   <Properties>
     <DisplayName>SimpleInventoryStock</DisplayName>
@@ -26,7 +26,7 @@
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
       <uap:VisualElements
         DisplayName="Simple Inventory Control App"
-        Description="A simple inventory register"
+        Description="A simple inventory to register your products"
         Square150x150Logo="$placeholder$.png"
         Square44x44Logo="$placeholder$.png"
         BackgroundColor="transparent">

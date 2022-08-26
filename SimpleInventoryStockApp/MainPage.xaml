@@ -20,8 +20,8 @@
 
         <VerticalStackLayout Padding="1" Grid.Row="0" Margin="2">
             <Entry x:Name="Item" Placeholder="Enter product" Text="{Binding Item}"/>
-            <Entry x:Name="Qty" Placeholder="Enter quantity" Text="{Binding Qty}"/>
-            <Entry x:Name="Price" Placeholder="Enter price" Text="{Binding Price}"/>
+            <Entry x:Name="Qty" Placeholder="Enter quantity" Keyboard="Numeric" Text="{Binding Qty}"/>
+            <Entry x:Name="Price" Placeholder="Enter price" Keyboard="Numeric" Text="{Binding Price}"/>
             <Entry x:Name="Location" Placeholder="Enter product's location" Text="{Binding Location}"/>
             <Entry x:Name="Supplier" Placeholder="Enter supplier" Text="{Binding Supplier}"/>
             <Entry x:Name="Observations" Placeholder="Enter observations" Text="{Binding Observations}"/>

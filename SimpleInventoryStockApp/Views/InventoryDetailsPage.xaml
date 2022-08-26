@@ -6,45 +6,46 @@
              Title="{Binding Inventory.Item}"
              x:DataType="vm:InventoryDetailsViewModel"
              BackgroundColor="IndianRed">
+    
     <StackLayout>
         <Label Text="Date"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" FontSize="35"/>
+                HorizontalOptions="Center" FontSize="30"/>
         <Label Text="{Binding Inventory.Date}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="20"/>
         <Label></Label>
         <Label Text="Price $"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" FontSize="35"/>
+                HorizontalOptions="Center" FontSize="30"/>
         <Label Text="{Binding Inventory.Price}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="20"/>
         <Label></Label>
         <Label Text="Units"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" FontSize="35"/>
+                HorizontalOptions="Center" FontSize="30"/>
         <Label Text="{Binding Inventory.Qty}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="20"/>
         <Label></Label>
         <Label Text="Supplier"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" FontSize="35"/>
+                HorizontalOptions="Center" FontSize="30"/>
         <Label Text="{Binding Inventory.Supplier}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="20"/>
         <Label></Label>
         <Label Text="Observations"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" FontSize="35"/>
+                HorizontalOptions="Center" FontSize="30"/>
         <Label Text="{Binding Inventory.Observations}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="20"/>
         <Label></Label>
         <Label Text="Location"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" FontSize="35"/>
+                HorizontalOptions="Center" FontSize="30"/>
         <Label Text="{Binding Inventory.Location}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="20"/>
