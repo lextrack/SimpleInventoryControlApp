@@ -19,7 +19,7 @@
 		<ApplicationIdGuid>C746921B-7089-4E1A-8CF0-E4A1C3EDE4BB</ApplicationIdGuid>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0.3</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>1.0.5</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
@@ -42,14 +42,14 @@
 		<AppInstallerUri>C:\Users\ariel\source\repos\lextrack\SimpleInventoryControlApp\SimpleInventoryStockApp\bin\Release\net6.0-windows10.0.19041.0\win10-x64\publish</AppInstallerUri>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
 		<Product>Simple Inventory Control App</Product>
-		<Version>1.0.3</Version>
-		<AssemblyVersion>1.0.3</AssemblyVersion>
-		<FileVersion>1.0.3</FileVersion>
+		<Version>1.0.5</Version>
+		<AssemblyVersion>1.0.5</AssemblyVersion>
+		<FileVersion>1.0.5</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#000000" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#0B662" />
 		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#0B6623" BaseSize="128,128" />

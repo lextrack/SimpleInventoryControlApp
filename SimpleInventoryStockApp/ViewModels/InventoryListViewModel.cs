@@ -17,11 +17,11 @@ namespace SimpleInventoryStockApp.ViewModels
     {
         const string editButtonText = "Update";
         const string createButtonText = "Add item";
-        public ObservableCollection<Inventory> Inventories { get; private set; } = new ();
+        public ObservableCollection<Inventory> Inventories { get; set; } = new ();
 
         public InventoryListViewModel()
         {
-            Title = "Inventory";
+            Title = "Inventory Control Register";
             AddEditButtonText = createButtonText;
             GetInventoryList().Wait();
         }

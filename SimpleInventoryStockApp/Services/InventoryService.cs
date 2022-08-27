@@ -85,7 +85,7 @@ namespace SimpleInventoryStockApp.Services
                 result = conn.Insert(inventory);
                 StatusMessage = result == 0 ? "Insert Failed" : "Insert Successful";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 StatusMessage = "Failed to insert data.";
             }
@@ -103,7 +103,7 @@ namespace SimpleInventoryStockApp.Services
                 result = conn.Update(inventory);
                 StatusMessage = result == 0 ? "Update Failed" : "Update Successful";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 StatusMessage = "Failed to Update data.";
             }
