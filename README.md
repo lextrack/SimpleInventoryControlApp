@@ -10,5 +10,5 @@ I've used <a href="https://dotnet.microsoft.com/en-us/apps/maui">.NET MAUI </a> 
 - iOS 14.2<br>
 
 
-[![Screenshot-2022-07-29-170334.png](https://i.postimg.cc/ydfJv258/Screenshot-2022-07-29-170334.png)](https://postimg.cc/FdLsKCNM)
-[![Screenshot-2022-07-29-170349.png](https://i.postimg.cc/FRFdbhT6/Screenshot-2022-07-29-170349.png)](https://postimg.cc/Y4VCMBKN)
+[![front-app-maui1.jpg](https://i.postimg.cc/rwbRsmkk/front-app-maui1.jpg)](https://postimg.cc/yDm8r7xQ)
+[![back-app-maui2.jpg](https://i.postimg.cc/L8hZmPGD/back-app-maui2.jpg)](https://postimg.cc/18hzH8mV)
