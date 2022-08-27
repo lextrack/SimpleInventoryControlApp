@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:SimpleInventoryStockApp.ViewModels"
              Title="{Binding Inventory.Item}"
              x:DataType="vm:InventoryDetailsViewModel"
-             BackgroundColor="IndianRed">
+             BackgroundColor="#0B6623">
     
     <StackLayout>
         <Label Text="Date"

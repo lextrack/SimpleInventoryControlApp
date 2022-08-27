@@ -12,14 +12,14 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>SimpleInventoryStockApp</ApplicationTitle>
+		<ApplicationTitle>Simple Inventory Control App</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.simpleinventorystockapp</ApplicationId>
+		<ApplicationId>com.lextrack.simpleinventorystockapp</ApplicationId>
 		<ApplicationIdGuid>C746921B-7089-4E1A-8CF0-E4A1C3EDE4BB</ApplicationIdGuid>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>1.0.3</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
@@ -32,7 +32,7 @@
 		<Authors>Lextrack</Authors>
 		<Copyright>Lextrack</Copyright>
 		<DefaultLanguage>en</DefaultLanguage>
-		<PackageCertificateThumbprint>833BCBCB0CD0E609D22937EB9C06B2478BDD1939</PackageCertificateThumbprint>
+		<PackageCertificateThumbprint>F545E20311F2E064E3F1563A73B2479481B4A7BD</PackageCertificateThumbprint>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<GenerateAppInstallerFile>True</GenerateAppInstallerFile>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
@@ -42,17 +42,17 @@
 		<AppInstallerUri>C:\Users\ariel\source\repos\lextrack\SimpleInventoryControlApp\SimpleInventoryStockApp\bin\Release\net6.0-windows10.0.19041.0\win10-x64\publish</AppInstallerUri>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
 		<Product>Simple Inventory Control App</Product>
-		<Version>1.0.2</Version>
-		<AssemblyVersion>1.0.2</AssemblyVersion>
-		<FileVersion>1.0.2</FileVersion>
+		<Version>1.0.3</Version>
+		<AssemblyVersion>1.0.3</AssemblyVersion>
+		<FileVersion>1.0.3</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\inventario.png" Color="#000000" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#000000" />
 		
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\inventario.png" Color="#512BD4" BaseSize="48,48" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#0B6623" BaseSize="128,128" />
 		
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
