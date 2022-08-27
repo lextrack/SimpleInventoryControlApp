@@ -49,7 +49,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#0B662" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#0B6623" />
 		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#0B6623" BaseSize="128,128" />
@@ -70,5 +70,13 @@
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.0" />
 	</ItemGroup>
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyStore>..\key.keystore</AndroidSigningKeyStore>
+		<AndroidSigningStorePass>123456</AndroidSigningStorePass>
+		<AndroidSigningKeyAlias>InventoryApp</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass>123456</AndroidSigningKeyPass>
+	</PropertyGroup>
 
 </Project>
