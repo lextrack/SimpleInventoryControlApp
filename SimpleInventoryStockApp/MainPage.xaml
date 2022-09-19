@@ -48,7 +48,7 @@
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=GetInventoryDetailsCommand }" 
                                                           CommandParameter="{Binding Id}" />
                                 </Frame.GestureRecognizers>
-                                <HorizontalStackLayout Padding="1" Spacing="5">
+                                <HorizontalStackLayout Padding="5" Spacing="5">
                                     <Label Text="{Binding Item}"></Label>
                                     <Label>|</Label>
                                     <Label Text="{Binding Qty}"></Label>

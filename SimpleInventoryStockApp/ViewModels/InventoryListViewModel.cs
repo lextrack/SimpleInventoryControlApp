@@ -17,7 +17,7 @@ namespace SimpleInventoryStockApp.ViewModels
     {
         const string editButtonText = "Update";
         const string createButtonText = "Add item";
-        public ObservableCollection<Inventory> Inventories { get; set; } = new ();
+        public ObservableCollection<Inventory> Inventories { get; private set; } = new ();
 
         public InventoryListViewModel()
         {
@@ -100,6 +100,7 @@ namespace SimpleInventoryStockApp.ViewModels
 
             var inventory = new Inventory
             {
+                Id = InventoryId,
                 Item = Item,
                 Qty = qty,
                 Price = Price,
