@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SimpleInventoryStockApp.Models;
-using SimpleInventoryStockApp.Services;
 using SimpleInventoryStockApp.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+
 
 namespace SimpleInventoryStockApp.ViewModels
 {
@@ -17,7 +12,7 @@ namespace SimpleInventoryStockApp.ViewModels
     {
         const string editButtonText = "Update";
         const string createButtonText = "Add item";
-        public ObservableCollection<Inventory> Inventories { get; private set; } = new ();
+        public ObservableCollection<Inventory> Inventories { get; private set; } = new();
 
         public InventoryListViewModel()
         {
@@ -102,7 +97,7 @@ namespace SimpleInventoryStockApp.ViewModels
             {
                 Id = InventoryId,
                 Item = Item,
-                Qty = qty,
+                Qty = Qty,
                 Price = Price,
                 Location = Location,
                 Supplier = Supplier,

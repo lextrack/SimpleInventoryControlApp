@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SimpleInventoryStockApp.ViewModels
@@ -16,6 +12,6 @@ namespace SimpleInventoryStockApp.ViewModels
         [NotifyPropertyChangedFor(nameof(IsNotLoading))]
         bool isLoading;
 
-        public bool IsNotLoading => !isLoading;
+        public bool IsNotLoading => !IsLoading;
     }
 }

@@ -1,10 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
+/* Unmerged change from project 'SimpleInventoryStockApp (net7.0-ios)'
+Before:
+using System;
+After:
+using SimpleInventoryStockApp.Models;
+using SQLite;
+using System;
+*/
+
+/* Unmerged change from project 'SimpleInventoryStockApp (net7.0-android)'
+Before:
+using System;
+After:
+using SimpleInventoryStockApp.Models;
+using SQLite;
+using System;
+*/
+
+/* Unmerged change from project 'SimpleInventoryStockApp (net7.0-windows10.0.19041.0)'
+Before:
+using System;
+After:
+using SimpleInventoryStockApp.Models;
+using SQLite;
+using System;
+*/
+using SimpleInventoryStockApp.Models;
+using
+/* Unmerged change from project 'SimpleInventoryStockApp (net7.0-ios)'
+Before:
 using System.Threading.Tasks;
 using SQLite;
 using SimpleInventoryStockApp.Models;
+After:
+using System.Threading.Tasks;
+*/
+
+/* Unmerged change from project 'SimpleInventoryStockApp (net7.0-android)'
+Before:
+using System.Threading.Tasks;
+using SQLite;
+using SimpleInventoryStockApp.Models;
+After:
+using System.Threading.Tasks;
+*/
+
+/* Unmerged change from project 'SimpleInventoryStockApp (net7.0-windows10.0.19041.0)'
+Before:
+using System.Threading.Tasks;
+using SQLite;
+using SimpleInventoryStockApp.Models;
+After:
+using System.Threading.Tasks;
+*/
+SQLite;
 
 namespace SimpleInventoryStockApp.Services
 {

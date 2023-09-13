@@ -12,7 +12,6 @@ public partial class InventoryDetailsPage : ContentPage
 
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
-        // Do fanciness 
         base.OnNavigatedTo(args);
     }
 }
