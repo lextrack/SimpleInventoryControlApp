@@ -6,8 +6,8 @@
              Title="{Binding Inventory.Item}"
              x:DataType="vm:InventoryDetailsViewModel"
              BackgroundColor="#0B6623">
-    
-    <StackLayout>
+    <ScrollView>
+        <StackLayout>
         <Label Text="Date"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="30"/>
@@ -51,4 +51,5 @@
                 HorizontalOptions="Center" FontSize="20"/>
 
     </StackLayout>
+    </ScrollView>
 </ContentPage>

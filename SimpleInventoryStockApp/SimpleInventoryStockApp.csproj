@@ -41,7 +41,7 @@
 		<AppInstallerUri>C:\Users\ariel\source\repos\lextrack\SimpleInventoryControlApp\SimpleInventoryStockApp\bin\Release\net6.0-windows10.0.19041.0\win10-x64\publish</AppInstallerUri>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
 		<Product>Simple Inventory Control App</Product>
-		<Version>1.0.5</Version>
+		<Version>1.0.6</Version>
 		<AssemblyVersion>1.0.6</AssemblyVersion>
 		<FileVersion>1.0.6</FileVersion>
 	</PropertyGroup>
@@ -70,6 +70,7 @@
 	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.6" />
 	</ItemGroup>
 
+	<!--Android release settings-->
 	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
 		<AndroidKeyStore>True</AndroidKeyStore>
 		<AndroidSigningKeyStore>..\key.keystore</AndroidSigningKeyStore>

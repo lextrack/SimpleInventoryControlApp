@@ -6,8 +6,8 @@
              xmlns:viewmodel ="clr-namespace:SimpleInventoryStockApp.ViewModels"
              x:DataType ="viewmodel:InventoryListViewModel"
              Title="{Binding Title}">
-    
-    <Grid ColumnSpacing="1" RowSpacing="2" Padding="5">
+    <ScrollView>
+        <Grid ColumnSpacing="1" RowSpacing="2" Padding="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -19,7 +19,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <VerticalStackLayout Padding="1" Grid.Row="0" Margin="2">
+        <VerticalStackLayout  Grid.Row="0">
             <Entry x:Name="Item" Placeholder="Enter product" Text="{Binding Item}"/>
             <Entry x:Name="Qty" Placeholder="Enter quantity" Keyboard="Numeric" Text="{Binding Qty}"/>
             <Entry x:Name="Price" Placeholder="Enter price" Keyboard="Numeric" Text="{Binding Price}"/>
@@ -31,10 +31,10 @@
 
 
         <Button Text="{Binding AddEditButtonText}" Grid.Row="1" IsEnabled="{Binding IsNotLoading}"
-                Command="{Binding SaveInventoryCommand}" Margin="7,1,4,2" />
+                Command="{Binding SaveInventoryCommand}" Margin="0,3,0,0" />
 
         <Button Text="Clear all" Command="{Binding ClearFormCommand}" IsEnabled="{Binding IsNotLoading}" 
-                Grid.Row="2" Margin="7,1,4,2"/>
+                Grid.Row="2" Margin="0,3,0,3"/>
 
         <RefreshView Grid.Row="4"
                      Command="{Binding GetInventoryListCommand}" 
@@ -42,8 +42,8 @@
             <CollectionView ItemsSource="{Binding Inventories}" SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Inventory">
-                        <Grid Padding="5" ColumnDefinitions="*, auto">
-                            <Frame HeightRequest="70" Grid.Column="0" Background="#0B6623">
+                        <Grid ColumnDefinitions="*, auto">
+                            <Frame HeightRequest="75" Grid.Column="0" Background="#0B6623">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=GetInventoryDetailsCommand }" 
                                                           CommandParameter="{Binding Id}" />
@@ -67,4 +67,5 @@
             </CollectionView>
         </RefreshView>
     </Grid>
+    </ScrollView>
 </ContentPage>
