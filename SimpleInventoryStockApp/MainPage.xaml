@@ -43,7 +43,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Inventory">
                         <Grid Padding="5" ColumnDefinitions="*, auto">
-                            <Frame Grid.Column="0" Background="#0B6623">
+                            <Frame HeightRequest="70" Grid.Column="0" Background="#0B6623">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InventoryListViewModel}}, Path=GetInventoryDetailsCommand }" 
                                                           CommandParameter="{Binding Id}" />
